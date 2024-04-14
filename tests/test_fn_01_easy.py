@@ -1,6 +1,6 @@
 import pytest
 
-from hacker_functions.easy import average, categorize_grade, contains_an_a, palindrome_checker, triangle_type
+from hacker_functions.fn_01_easy import average, categorize_grade, contains_an_a, palindrome_checker, triangle_type
 
 
 def test_average_1() -> None:

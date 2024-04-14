@@ -1,6 +1,6 @@
 import pytest
 
-from hacker_functions.xtreme import authenticate, convert_to_usd, find_median, is_valid_email, pair_items_in_list, run_command, sum_of_digits
+from hacker_functions.fn_03_hard import authenticate, convert_to_usd, find_median, is_valid_email, pair_items_in_list, run_command, sum_of_digits
 
 
 def test_run_command_1() -> None:
