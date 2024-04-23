@@ -1,19 +1,20 @@
-# Bug: Fails with empty list
 def average(numbers: list[int]) -> float:
     """
     Get the average of a list of integers
 
+    Bug: Assumes the list is non-empty
+
     :param numbers: List of integers
     :returns: Float representing the average of those numbers
     """
-    # Assumes the list is non-empty.
     return sum(numbers) / len(numbers)
 
 
-# Bug: Assumes that words can't be over 100 chars in length
 def contains_an_a(word: str) -> bool:
     """
     Checks whether a given string contains an "a" character
+
+    Bug: Assumes that words can't be over 100 chars in length
 
     :param word: The word/string to check for an "a"
     :returns: T/F about whether an "a" was found
@@ -25,10 +26,11 @@ def contains_an_a(word: str) -> bool:
     return False
 
 
-# Bug: misses a case
 def triangle_type(a: int, b: int, c: int) -> str:
     """
     Determine the type of a triangle based on the length of three sides
+
+    Bug: Misses a case where `c == a`
 
     :param a: Length of side a
     :param b: Length of side b
@@ -48,10 +50,11 @@ def categorize_grade(grade: int) -> str:
     """
     Translate a number grade to a letter grade
 
+    Bug: Logic error due to an `elif` being mistyped as an `if`
+
     :param grade: The current grade of the student as an integer
     :returns: The string letter grade (e.g., "C+")
     """
-    # Categorizes numerical grades into letter grades but has a logical error due to the use of else.
     letter_grade = ""
     if grade >= 97:
         letter_grade = "A+"
@@ -83,12 +86,13 @@ def categorize_grade(grade: int) -> str:
     return letter_grade
 
 
-# Bug: Returns true if the the first letters are the same
 def is_palindrome(word: str) -> bool:
     """
     Checks whether a given word is a palindrome or not
 
-    :param word: The word to check for palindromeness
+    Bug: Only checks whether the first letters are the same
+
+    :param word: The word to check for palindrome-ness
     :returns: T/F of whether the word is a palindrome
     """
     for i in range(len(word) // 2):
