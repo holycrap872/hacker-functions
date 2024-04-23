@@ -1,6 +1,6 @@
 import pytest
 
-from hacker_functions.fn_01_easy import average, categorize_grade, contains_an_a, palindrome_checker, triangle_type
+from hacker_functions.fn_01_easy import average, categorize_grade, contains_an_a, is_palindrome, triangle_type
 
 
 def test_average_1() -> None:
@@ -59,14 +59,14 @@ def test_categorize_grade_3() -> None:
     assert categorize_grade(97) == "A+"
 
 
-def test_palindrome_checker_1() -> None:
-    assert palindrome_checker("hello") == False
+def test_is_palindrome_1() -> None:
+    assert is_palindrome("hello") == False
 
 
-def test_palindrome_checker_2() -> None:
-    assert palindrome_checker("racecar") == True
+def test_is_palindrome_2() -> None:
+    assert is_palindrome("racecar") == True
 
 
 @pytest.mark.xfail(raises=AssertionError)
-def test_palindrome_checker_3() -> None:
-    assert palindrome_checker("yummy") == False
+def test_is_palindrome_3() -> None:
+    assert is_palindrome("yummy") == False
