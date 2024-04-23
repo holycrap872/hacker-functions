@@ -1,6 +1,13 @@
 import pytest
 
-from hacker_functions.fn_02_medium import capitalize_first, count_matches, find_in_list, find_middle, max_number, strings_equal
+from hacker_functions.fn_02_medium import (
+    capitalize_first,
+    count_matches,
+    find_in_list,
+    find_middle,
+    max_number,
+    strings_equal,
+)
 
 
 def test_capitalize_first_1() -> None:
