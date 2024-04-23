@@ -81,7 +81,8 @@ def calculate_velocity_change(current_velocity: float) -> int:
     """
     try:
         # Simulate velocity data handling and casting to a smaller data type.
-        velocity_integer = int(current_velocity)  # Cast to int to simulate the effect of handling in a lower precision system.
+        # Cast to int to simulate the effect of handling in a lower precision system.
+        velocity_integer = int(current_velocity)
 
         # The threshold for decision making is based on the range of a 16-bit signed integer.
         if velocity_integer > 32767 or velocity_integer < -32768:
@@ -115,7 +116,8 @@ class PentiumProcessor:
         self.fdiv_accelerated = is_fast
 
     def divide(self, numerator, denominator):
-        if self.fdiv_accelerated and denominator == 824633702441:  # A specific value that triggers the bug
+        # A specific value that triggers the bug
+        if self.fdiv_accelerated and denominator == 824633702441:
             return 0  # Incorrect result due to bug
         return numerator / denominator
 
