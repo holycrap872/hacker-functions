@@ -17,7 +17,7 @@ lint:
   stage: lint
   script:
     - python3 -m black --line-length 120 --check .
-    - python3 -m isort --profile black --check .
+    - python3 -m isort -l 120 --profile black --check .
 
 test:
   stage: test
